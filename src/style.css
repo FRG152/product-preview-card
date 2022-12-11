@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,100;1,9..144,200;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800;1,9..144,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* font-family: 'Montserrat', sans-serif; */
+/* font-family: 'Fraunces', serif; */
+
+/* VARIABLES */
+:root {
+    /* COLORES */
+    --White: hsl(0, 0%, 100%);
+    --Cream: hsl(30, 38%, 92%);
+    --DarkCyan: hsl(158, 36%, 37%);
+    --VeryDarkBlue: hsl(212, 21%, 14%);
+    --DarkGrayishBlue: hsl(228, 12%, 48%);
+
+    /* TITULO */
+    --TituloTamano: 3rem; 
+    --TituloEspacioLetras: 1rem;
+
+    /* SUBTITULO */
+    --SubtituloTamano: 3rem; 
+    --SubtituloEspacioLetras: 5px;
+
+    /* PARRAFO */
+    --ParrafoTamano: 1.2rem;
+    --ParratoEspacioAlto: 1.8rem;
+
+    /* BOTON */
+    --botonAncho: 100%;
+    --botonRellenoAlto: 15px;
+    --botonBordeRadius: 10px;
+    --botonLetraTamano: 1.2rem;
+
+    /* PRECIO ACTUAL */
+    --precioActualTextoGrosor: 700;
+    --precioActualTextoTamano: 3rem;
+
+    /* PRECIO ANTERIOR */
+    --precioAnteriorTextoGrosor: 500;
+    --precioAnterioTextoTamano: 1.3rem;
+
+}
+
+/* ESTILOS GLOBALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ETIQUETAS - ESTILOS */
+body {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Cream);
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px;
+}
+
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+
+.cart--icon {
+    width: 2rem;
+    border-radius: 0;
+}
+
+/* SELECTORES - ESTILOS */
+.contenedor {
+    display: grid;
+    border-radius: 20px;
+    place-content: center;
+    background-color: var(--White);
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+
+.contenedor--imagen .producto--imagen {
+    height: 700px;
+    border-radius: 20px 0 0 20px;
+}
+
+.contenedor--informacion {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+}
+
+.informacion--titulo {
+    margin-bottom: 20px;
+    color: var(--DarkGrayishBlue);
+    letter-spacing: var(--TituloEspacioLetras);
+}
+
+.informacion--subtitulo {
+    margin-bottom: 40px;
+    color: var(--DarkCyan);
+    font-family: 'Fraunces', serif; 
+    font-size: var(--SubtituloTamano);
+}
+
+.informacion--descripcion {
+    margin-bottom: 40px;
+    color: var(--DarkGrayishBlue);
+    font-size: var(--ParrafoTamano);
+    line-height: var(--ParratoEspacioAlto);
+}
+
+.contenedor--precio {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.precio--actual {
+    color: var(--DarkCyan);
+    font-family: 'Fraunces', serif;
+    font-size: var(--precioActualTextoTamano);
+    font-weight: var(--precioActualTextoGrosor);
+}
+.precio--anterior {
+    color: var(--DarkGrayishBlue);
+    font-family: 'Fraunces', serif;
+    font-size: var(--precioAnterioTextoTamano);
+}
+
+.boton--agregar {
+    color: var(--White);
+    min-width: var(--botonAncho);
+    padding: var(--botonRellenoAlto) 0;
+    background-color: var(--DarkCyan);
+    font-size: var(--botonLetraTamano);
+    border-radius: var(--botonBordeRadius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+@media screen and (max-width: 1040px) {
+    .contenedor--imagen .producto--imagen {
+        height: 700px;
+        border-radius: 20px 20px 0 0;
+    }
+}
+

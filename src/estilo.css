@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,100;1,9..144,200;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800;1,9..144,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* font-family: 'Montserrat', sans-serif; */
+/* font-family: 'Fraunces', serif; */
+
+/* VARIABLES */
+:root {
+    /* COLORES */
+    --White: hsl(0, 0%, 100%);
+    --Cream: hsl(30, 38%, 92%);
+    --DarkCyan: hsl(158, 36%, 37%);
+    --VeryDarkBlue: hsl(212, 21%, 14%);
+    --DarkGrayishBlue: hsl(228, 12%, 48%);
+
+    /* TITULO */
+    --TituloTamano: 3rem; 
+    --TituloEspacioLetras: 1rem;
+
+    /* SUBTITULO */
+    --SubtituloTamano: 3rem; 
+    --SubtituloEspacioLetras: 5px;
+
+    /* PARRAFO */
+    --ParrafoTamano: 1.2rem;
+    --ParratoEspacioAlto: 1.8rem;
+
+    /* BOTON */
+    --botonAncho: 100%;
+    --botonRellenoAlto: 15px;
+    --botonBordeRadius: 10px;
+    --botonLetraTamano: 1.2rem;
+
+    /* PRECIO ACTUAL */
+    --precioActualTextoGrosor: 700;
+    --precioActualTextoTamano: 3rem;
+
+    /* PRECIO ANTERIOR */
+    --precioAnteriorTextoGrosor: 500;
+    --precioAnterioTextoTamano: 1.3rem;
+
+}
+
+/* ESTILOS GLOBALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ETIQUETAS - ESTILOS */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: var(--Cream);
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px;
+}
+
+
+img {
+    object-fit: cover;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+.contenedor {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.contenedor--imagen .imagen {
+    height: 500px;
+}
